@@ -37,3 +37,11 @@ The home page of your fork should now be linked to the package, and you should b
 ```
 docker pull ghcr.io/xxxxx/damask:yyyyy
 ```
+
+### Using Apptainer/Singularity
+
+To import your docker image run the command:
+```
+singularity pull docker://ghcr.io/xxxxx/damask:yyyyy
+```
+This should generate a .sif file that you can then use normally.
