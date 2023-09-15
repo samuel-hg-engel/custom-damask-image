@@ -24,6 +24,16 @@ on:
         required: false
         type: string
         default: ""
+      petsc_version:
+        description: 'PETSc version'
+        required: true
+        type: string
+        default: '3.19.5'
+      gcc_version:
+        description: 'GCC version'
+        required: true
+        type: string
+        default: '13.1.0'
 
 jobs:
   build-push:
@@ -45,6 +55,8 @@ jobs:
           tags: damask:testing
           build-args: |
             damask_repo=${{ github.event.inputs.source }}
+            PETSC_VERSION=${{ github.event.inputs.petsc_version }}
+            GCC_V=${{ github.event.inputs.gcc_version }}
         
       - name: Test
         run: |

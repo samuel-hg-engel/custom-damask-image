@@ -1,4 +1,12 @@
-FROM ghcr.io/hpcflow/petsc:3.18.4_gcc12
+ARG GCC_V=13.2.0
+ARG PETSC_VERSION=3.19.5
+
+FROM ghcr.io/hpcflow/petsc:${PETSC_VERSION}_gcc${GCC_V}
+
+RUN <<SysReq
+    apt-get update
+    apt-get install -y wget git software-properties-common make cmake pkg-config
+SysReq
 
 ARG damask_repo=eisenforschung/DAMASK
 
