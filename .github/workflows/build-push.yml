@@ -1,5 +1,5 @@
 name: build-push
-run-name: 'build-push: source? ${{ github.event.inputs.source }} target? ${{ github.event.inputs.target }} - latest? ${{ github.event.inputs.latest }} - custom_tag? ${{ github.event.inputs.custom_tag }}'
+run-name: 'build-push: source? ${{ github.event.inputs.source }} target? ${{ github.event.inputs.target }} - latest? ${{ github.event.inputs.latest }} - custom_tag? ${{ github.event.inputs.custom_tag }} - petsc? ${{ github.event.inputs.petsc_version }} - gcc? ${{ github.event.inputs.gcc_version }}'
 
 on:
   workflow_dispatch:
