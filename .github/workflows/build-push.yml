@@ -8,12 +8,12 @@ on:
         description: 'github repository where source code is stored'
         required: true
         type: string
-        default: "eisenforschung/DAMASK"
+        default: "samuel-hg-engel/DAMASK"
       target:
         description: 'ghcr.io repository where image will be pushed to'
         required: true
         type: string
-        default: ""
+        default: "ghcr.io/samuel-hg-engel/damask:latest"
       latest:
         description: 'Push with "latest" tag?'
         required: true
